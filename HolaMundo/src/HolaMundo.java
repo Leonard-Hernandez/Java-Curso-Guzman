@@ -3,6 +3,6 @@ public class HolaMundo {
         System.out.println("Hola mundo desde java");
         String nombre = "Leonard";
 
-        System.out.println("Hola " + nombre);
+        System.out.println("Hola me llamo," + nombre);
     }
 }
