@@ -33,6 +33,5 @@ public class Primitivos {
         //es integer hasta llegar al limite
         var numeroVar = 9223372036854775807L;
 
-
     }
 }
