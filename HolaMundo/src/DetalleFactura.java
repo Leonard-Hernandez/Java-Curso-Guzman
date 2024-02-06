@@ -1,3 +1,4 @@
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class DetalleFactura {
@@ -8,11 +9,23 @@ public class DetalleFactura {
         System.out.println("Introduzca la descripcion de la factura");
         String descripcion = scanner.nextLine();
 
-        System.out.println("Introduzca el precio del primer producto");
-        double producto1 = scanner.nextDouble();
+        double producto1 = 0;
+        double producto2 = 0;
 
-        System.out.println("Introduzca el precio del segundo producto");
-        double producto2 = scanner.nextDouble();
+        try{
+
+            System.out.println("Introduzca el precio del primer producto");
+            producto1 = scanner.nextDouble();
+
+            System.out.println("Introduzca el precio del segundo producto");
+            producto2 = scanner.nextDouble();
+
+        }catch (InputMismatchException e){
+            System.out.println("Solo se aceptan numeros en precios");
+            main(args);
+            System.exit(0);
+
+        }
 
         double totalSinImpuestos = producto1+producto2;
         double impuestos = (producto1+producto2)* 0.19;
