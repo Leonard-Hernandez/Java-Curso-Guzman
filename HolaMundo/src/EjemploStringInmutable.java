@@ -12,6 +12,6 @@ public class EjemploStringInmutable {
         System.out.println("curso = " + curso);
         System.out.println("resultado2 = " + resultado2);
         String resultado3 = resultado.replace("a", "A");
-        System.out.println("resultado3 = " + resultado3);
+        System.out.println("resultado3 = " + resultado3 );
     }
 }
