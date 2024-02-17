@@ -27,17 +27,29 @@ public class OperadoresLogicosEjemploLogin {
 
         for(int i = 0; i < usernames.length; i++){
 
-            if( usernames[i].equals(usuario) && passwords[i].equals(contraseña)){
+            esAutenticado = usernames[i].equals(usuario) && passwords[i].equals(contraseña) ? true: esAutenticado;
+
+
+            /*if( usernames[i].equals(usuario) && passwords[i].equals(contraseña)){
                 esAutenticado = true;
                 break;
-            }
+            }*/
         }
 
-        if(esAutenticado){
+        String mensaje = "";
+        mensaje = esAutenticado ? "Bienvenido usuario ".concat(usuario).concat("!"):
+                "Credencailes incorrectas \n" +
+                        "Necesiras autenticacion";
+
+        System.out.println(mensaje);
+        /*if(esAutenticado){
             System.out.println("Bienvenido usuario ".concat(usuario).concat("!"));
         }else {
             System.out.println("Credenciales incorrectas");
             System.out.println("Necesitas autenticacion");
-        }
+        }*/
+
+
+
     }
 }
