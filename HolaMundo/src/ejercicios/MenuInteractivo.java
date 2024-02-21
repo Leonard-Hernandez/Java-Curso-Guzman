@@ -85,8 +85,6 @@ public class MenuInteractivo {
                         break;
                     case 5:
                         break bucle;
-                    default:
-                        System.out.println("Opcion no encotrada");
                 }
             }
         }
