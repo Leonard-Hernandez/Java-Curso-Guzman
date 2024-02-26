@@ -1,4 +1,4 @@
-package Wrapper;
+package wrapper;
 
 public class AutoboxingInteger {
     public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package ValorVsReferencia;
+package valorVsReferencia;
 class Persona{
     private String nombre;
 

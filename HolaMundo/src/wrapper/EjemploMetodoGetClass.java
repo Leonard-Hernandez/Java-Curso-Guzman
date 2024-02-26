@@ -1,4 +1,4 @@
-package Wrapper;
+package wrapper;
 
 import java.lang.reflect.Method;
 

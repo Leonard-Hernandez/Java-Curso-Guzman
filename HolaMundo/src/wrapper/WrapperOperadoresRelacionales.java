@@ -1,4 +1,4 @@
-package Wrapper;
+package wrapper;
 
 public class WrapperOperadoresRelacionales {
     public static void main(String[] args) {
