@@ -16,11 +16,14 @@ public class EjemploStringTextRendimientoConcat {
             //sb.append(a).append(b).append("\n"); // 500 = 0ms 1000 = 1ms
 
         }
+        //garbage colector
+        System.gc();
 
         long fin = System.currentTimeMillis();
         System.out.println(fin - inicio);
         System.out.println("c = " + c);
         System.out.println("sb = " + sb.toString());
+        System.exit(0);
 
     }
 }
