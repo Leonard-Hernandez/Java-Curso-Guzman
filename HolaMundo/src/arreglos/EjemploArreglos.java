@@ -1,5 +1,13 @@
+package arreglos;
+
 public class EjemploArreglos {
     public static void main(String[] args) {
+
+        String[] productos = new String[7];
+        productos[0] = "Kingston pendrive 64gb";
+        productos[1] = "Samsung Galaxy";
+        productos[2] = "Disco Duro SSD";
+
 
         int[] numeros = new int[4];
 
