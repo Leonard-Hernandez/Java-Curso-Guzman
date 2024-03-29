@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class EjercicioHistogramaArreglo {
     public static void main(String[] args) {
 
-        int[] arreglo = new int[7];
+        int[] arreglo = new int[12];
         Scanner scanner = new Scanner(System.in);
 
         System.out.println("Ingrese 7 numeros del 1 al 6");
