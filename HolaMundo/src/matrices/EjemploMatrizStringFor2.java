@@ -1,3 +1,5 @@
+package matrices;
+
 public class EjemploMatrizStringFor2 {
     public static void main(String[] args) {
 
