@@ -12,7 +12,6 @@ public class EjemploMatricesSimetrica {
 
         int i,j;
         i=0;
-
         while (i < matriz.length && simetrica == true){
             j=0;
             while (j < i && simetrica == true){
