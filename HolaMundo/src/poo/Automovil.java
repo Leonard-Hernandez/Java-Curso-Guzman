@@ -4,7 +4,7 @@ public class Automovil {
 
     String fabricante;
     String model;
-    String color;
+    String color = "blue";
     double cilindrada;
 
 }
