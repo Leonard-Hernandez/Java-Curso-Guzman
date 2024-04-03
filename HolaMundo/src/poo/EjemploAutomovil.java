@@ -26,5 +26,6 @@ public class EjemploAutomovil {
         System.out.println("auto.model = " + auto2.model);
         System.out.println("auto.color = " + auto2.color);
         System.out.println("auto.cilindrada = " + auto2.cilindrada);
+
     }
 }
