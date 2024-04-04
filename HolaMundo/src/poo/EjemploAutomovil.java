@@ -10,10 +10,7 @@ public class EjemploAutomovil {
         auto.cilindrada = 2.0;
         auto.color = "Blanco";
 
-        System.out.println("auto = " + auto.fabricante);
-        System.out.println("auto.model = " + auto.model);
-        System.out.println("auto.color = " + auto.color);
-        System.out.println("auto.cilindrada = " + auto.cilindrada);
+        System.out.println(auto.detalle());
 
         Automovil auto2 = new Automovil();
 
@@ -22,10 +19,9 @@ public class EjemploAutomovil {
         auto2.cilindrada = 8.0;
         auto2.color = "Negro";
 
-        System.out.println("auto = " + auto2.fabricante);
-        System.out.println("auto.model = " + auto2.model);
-        System.out.println("auto.color = " + auto2.color);
-        System.out.println("auto.cilindrada = " + auto2.cilindrada);
+        System.out.println(auto2.detalle());
+
+
 
     }
 }
