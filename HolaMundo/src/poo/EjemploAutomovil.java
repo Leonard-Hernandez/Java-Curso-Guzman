@@ -27,5 +27,8 @@ public class EjemploAutomovil {
         System.out.println(auto.acelerarFrenar(150));
         System.out.println(auto2.acelerarFrenar(200));
 
+        System.out.println("Kilometro por litro " + auto2.calcularConsumo(300,0.6f));
+        System.out.println("Kilometro por litro " + auto2.calcularConsumo(300,6));
+
     }
 }
