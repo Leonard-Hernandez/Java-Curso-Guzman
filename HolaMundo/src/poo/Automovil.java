@@ -2,11 +2,51 @@ package poo;
 
 public class Automovil {
 
-    String fabricante;
-    String model;
-    String color = "blue";
-    double cilindrada;
-    int capacidadTanque= 40;
+    private String fabricante;
+    private String model;
+    private String color = "blue";
+    private double cilindrada;
+    private int capacidadTanque= 40;
+
+    public String getFabricante() {
+        return this.fabricante;
+    }
+
+    public void setFabricante(String fabricante) {
+        this.fabricante = fabricante;
+    }
+
+    public String getModel() {
+        return this.model;
+    }
+
+    public void setModel(String model) {
+        this.model = model;
+    }
+
+    public String getColor() {
+        return this.color;
+    }
+
+    public void setColor(String color) {
+        this.color = color;
+    }
+
+    public double getCilindrada() {
+        return this.cilindrada;
+    }
+
+    public void setCilindrada(double cilindrada) {
+        this.cilindrada = cilindrada;
+    }
+
+    public int getCapacidadTanque() {
+        return this.capacidadTanque;
+    }
+
+    public void setCapacidadTanque(int capacidadTanque) {
+        this.capacidadTanque = capacidadTanque;
+    }
 
     public String detalle(){
         return "auto = " + this.fabricante +

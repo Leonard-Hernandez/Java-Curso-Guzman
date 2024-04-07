@@ -5,17 +5,17 @@ public class EjemploAutomovil {
 
         Automovil auto = new Automovil();
 
-        auto.fabricante = "Subaru";
-        auto.model = "Impresa";
-        auto.cilindrada = 2.0;
-        auto.color = "Blanco";
+        auto.setFabricante("Subaru");
+        auto.setModel("Impresa");
+        auto.setCilindrada(2.0);
+        auto.setColor("Blanco");
 
         Automovil auto2 = new Automovil();
 
-        auto2.fabricante = "Toyota";
-        auto2.model = "Supra";
-        auto2.cilindrada = 8.0;
-        auto2.color = "Negro";
+        auto2.setFabricante("Toyota");
+        auto2.setModel("Supra");
+        auto2.setCilindrada(8.0);
+        auto2.setColor("Negro");
 
         System.out.println(auto.detalle());
         System.out.println(auto2.detalle());
