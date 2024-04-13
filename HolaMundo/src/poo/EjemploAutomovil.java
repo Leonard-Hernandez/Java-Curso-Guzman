@@ -3,13 +3,9 @@ package poo;
 public class EjemploAutomovil {
     public static void main(String[] args) {
 
-        Automovil auto = new Automovil("Subaru","Impresa");
-        auto.setCilindrada(2.0);
-        auto.setColor("Blanco");
+        Automovil auto = new Automovil("Subaru","Impresa", "Blanco" , 2.0);
 
-        Automovil auto2 = new Automovil("Toyota", "Supra");
-        auto2.setCilindrada(8.0);
-        auto2.setColor("Negro");
+        Automovil auto2 = new Automovil("Toyota", "Supra", "negro", 8.0, 50);
 
         Automovil nissan = new Automovil();
 
