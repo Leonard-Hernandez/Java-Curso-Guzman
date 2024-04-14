@@ -100,8 +100,17 @@ public class Automovil {
 
     @Override
     public boolean equals(Object obj){
+
+        if(this == obj){
+            return true;
+        }
+        if(!(obj instanceof Automovil)){
+            return false;
+        }
         Automovil a = (Automovil) obj;
-        return (this.fabricante.equals(a.getFabricante()) && this.model.equals(a.getModel()));
+        return (this.fabricante != null && this.model != null
+                && this.fabricante.equals(a.getFabricante())
+                && this.model.equals(a.getModel()));
     }
 
 }

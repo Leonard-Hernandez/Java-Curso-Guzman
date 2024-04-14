@@ -1,15 +1,19 @@
 package poo;
 
+import java.util.Date;
+
 public class EjemploAutomovil {
     public static void main(String[] args) {
 
         Automovil auto = new Automovil("Subaru","Impresa", "Blanco" , 2.0);
-
         Automovil auto2 = new Automovil("Toyota", "Supra", "negro", 8.0, 50);
         Automovil auto3 = new Automovil("Toyota", "Supra", "negro", 8.0, 50);
 
         Automovil nissan = new Automovil();
+        Date fecha = new Date();
 
+        System.out.println(auto3.equals(fecha));
+        System.out.println("nissan.equals(auto2) = " + nissan.equals(auto2));
         System.out.println("auto2 == auto3 =" + (auto2 == auto3));
         System.out.println("auto2.equals(auto3) =" + (auto2.equals(auto3)));
 
