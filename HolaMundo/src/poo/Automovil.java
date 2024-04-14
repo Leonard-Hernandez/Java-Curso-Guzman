@@ -98,4 +98,10 @@ public class Automovil {
         return km/(this.capacidadTanque*(porcentajeGasolina/100f));
     }
 
+    @Override
+    public boolean equals(Object obj){
+        Automovil a = (Automovil) obj;
+        return (this.fabricante.equals(a.getFabricante()) && this.model.equals(a.getModel()));
+    }
+
 }

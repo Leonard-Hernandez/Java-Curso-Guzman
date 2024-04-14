@@ -6,8 +6,12 @@ public class EjemploAutomovil {
         Automovil auto = new Automovil("Subaru","Impresa", "Blanco" , 2.0);
 
         Automovil auto2 = new Automovil("Toyota", "Supra", "negro", 8.0, 50);
+        Automovil auto3 = new Automovil("Toyota", "Supra", "negro", 8.0, 50);
 
         Automovil nissan = new Automovil();
+
+        System.out.println("auto2 == auto3 =" + (auto2 == auto3));
+        System.out.println("auto2.equals(auto3) =" + (auto2.equals(auto3)));
 
         System.out.println(auto.detalle());
         System.out.println(auto2.detalle());
