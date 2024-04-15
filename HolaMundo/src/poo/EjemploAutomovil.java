@@ -12,7 +12,8 @@ public class EjemploAutomovil {
         Automovil nissan = new Automovil();
         Date fecha = new Date();
 
-        System.out.println(auto3.equals(fecha));
+        System.out.println("auto 3 == fecha" + auto3.equals(fecha));
+        System.out.println(auto2.toString());
         System.out.println("nissan.equals(auto2) = " + nissan.equals(auto2));
         System.out.println("auto2 == auto3 =" + (auto2 == auto3));
         System.out.println("auto2.equals(auto3) =" + (auto2.equals(auto3)));

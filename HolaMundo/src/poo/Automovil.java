@@ -113,4 +113,8 @@ public class Automovil {
                 && this.model.equals(a.getModel()));
     }
 
+    @Override
+    public String toString() {
+        return fabricante +" "+ model;
+    }
 }
