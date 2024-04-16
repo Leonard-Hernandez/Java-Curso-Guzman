@@ -8,6 +8,8 @@ public class Automovil {
     private double cilindrada;
     private int capacidadTanque= 40;
 
+    private static String colorPatente = "Naranja";
+
     public Automovil(){}
     public Automovil(String fabricante, String model){
         this.fabricante = fabricante;
@@ -69,11 +71,21 @@ public class Automovil {
         this.capacidadTanque = capacidadTanque;
     }
 
+    public static String getColorPatente() {
+        return colorPatente;
+    }
+
+    public static void setColorPatente(String colorPatente) {
+        Automovil.colorPatente = colorPatente;
+    }
+
     public String detalle(){
         return "auto = " + this.fabricante +
                 "\nauto.model = " + this.model +
                 "\nauto.color = " + this.color +
-                "\nauto.cilindrada = " + this.cilindrada;
+                "\nauto.cilindrada = " + this.cilindrada +
+                "\ncolorPatente = " + Automovil.colorPatente;
+
     }
 
     public String acelerar(int rpm){
