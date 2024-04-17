@@ -2,6 +2,7 @@ package poo;
 
 public class Automovil {
 
+    private int id;
     private String fabricante;
     private String model;
     private String color = "blue";
@@ -9,9 +10,13 @@ public class Automovil {
     private int capacidadTanque= 40;
 
     private static String colorPatente = "Naranja";
+    private static int ultimoId;
 
-    public Automovil(){}
+    public Automovil(){
+        this.id = ++ultimoId;
+    }
     public Automovil(String fabricante, String model){
+        this();
         this.fabricante = fabricante;
         this.model = model;
     }
@@ -29,6 +34,14 @@ public class Automovil {
     public Automovil(String fabricante, String model, String color, double cilindrada, int capacidadTanque) {
         this(fabricante, model, color, cilindrada);
         this.capacidadTanque = capacidadTanque;
+    }
+
+    public int getId() {
+        return this.id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     public String getFabricante() {
@@ -80,7 +93,8 @@ public class Automovil {
     }
 
     public String detalle(){
-        return "auto = " + this.fabricante +
+        return  "id = " + this.id +
+                "\nauto = " + this.fabricante +
                 "\nauto.model = " + this.model +
                 "\nauto.color = " + this.color +
                 "\nauto.cilindrada = " + this.cilindrada +
@@ -127,6 +141,6 @@ public class Automovil {
 
     @Override
     public String toString() {
-        return fabricante +" "+ model;
+        return id +" "+fabricante +" "+ model;
     }
 }

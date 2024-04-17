@@ -1,7 +1,5 @@
 package poo;
 
-import java.util.Date;
-
 public class EjemploAutomovilStatic {
     public static void main(String[] args) {
 
