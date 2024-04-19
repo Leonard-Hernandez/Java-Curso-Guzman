@@ -9,6 +9,8 @@ public class Automovil {
     private double cilindrada;
     private int capacidadTanque= 40;
 
+    private TipoAutomovil tipo;
+
     private static String colorPatente = "Naranja";
     private static int ultimoId;
 
@@ -93,12 +95,20 @@ public class Automovil {
 
     public static void setColorPatente(String colorPatente) {
         Automovil.colorPatente = colorPatente;
+    }    
+
+    public TipoAutomovil getTipo() {
+        return tipo;
     }
 
+    public void setTipo(TipoAutomovil tipo) {
+        this.tipo = tipo;
+    }
     public String detalle(){
         return  "id = " + this.id +
                 "\nauto = " + this.fabricante +
                 "\nauto.model = " + this.model +
+                "\nauto.tipo = " + this.getTipo().getDescripcion() +
                 "\nauto.color = " + this.color +
                 "\nauto.cilindrada = " + this.cilindrada +
                 "\ncolorPatente = " + Automovil.colorPatente;
