@@ -5,9 +5,9 @@ import java.util.Date;
 public class EjemploAutomovil {
     public static void main(String[] args) {
 
-        Automovil auto = new Automovil("Subaru","Impresa", "Blanco" , 2.0);
-        Automovil auto2 = new Automovil("Toyota", "Supra", "negro", 8.0, 50);
-        Automovil auto3 = new Automovil("Toyota", "Supra", "negro", 8.0, 50);
+        Automovil auto = new Automovil("Subaru","Impresa", Color.ROJO , 2.0);
+        Automovil auto2 = new Automovil("Toyota", "Supra", Color.VERDE, 8.0, 50);
+        Automovil auto3 = new Automovil("Toyota", "Supra", Color.AMARILLO, 8.0, 50);
 
         Automovil nissan = new Automovil();
         Date fecha = new Date();
