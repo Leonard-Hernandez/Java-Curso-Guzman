@@ -6,8 +6,10 @@ public class Automovil {
     private String fabricante;
     private String model;
     private Color color = Color.AZUL;
-    private double cilindrada;
-    private int capacidadTanque= 40;
+    private Motor motor;
+    private Estanque estanque;
+    private Persona conductor;
+    private Rueda[] ruedas;
 
     private TipoAutomovil tipo;
 
@@ -31,14 +33,21 @@ public class Automovil {
         this.color = color;
     }
 
-    public Automovil(String fabricante, String model, Color color, double cilindrada) {
+    public Automovil(String fabricante, String model, Color color,Motor motor) {
         this(fabricante, model, color);
-        this.cilindrada = cilindrada;
+        this.motor = motor;
     }
 
-    public Automovil(String fabricante, String model, Color color, double cilindrada, int capacidadTanque) {
-        this(fabricante, model, color, cilindrada);
-        this.capacidadTanque = capacidadTanque;
+    public Automovil(String fabricante, String model, Color color, Motor motor, Estanque estanque) {
+        this(fabricante, model, color, motor);
+        this.estanque = estanque;
+    }    
+
+    public Automovil(String fabricante, String model, Color color, Motor motor, Estanque estanque, Persona conductor,
+            Rueda[] ruedas) {
+        this(fabricante, model, color, motor, estanque);
+        this.conductor = conductor;
+        this.ruedas = ruedas;
     }
 
     public int getId() {
@@ -73,20 +82,36 @@ public class Automovil {
         this.color = color;
     }
 
-    public double getCilindrada() {
-        return this.cilindrada;
+    public Motor getMotor() {
+        return this.motor;        
     }
 
-    public void setCilindrada(double cilindrada) {
-        this.cilindrada = cilindrada;
+    public void setMotor(Motor motor) {
+        this.motor = motor;
     }
 
-    public int getCapacidadTanque() {
-        return this.capacidadTanque;
+    public Estanque getEstanque() {
+        return this.estanque;
     }
 
-    public void setCapacidadTanque(int capacidadTanque) {
-        this.capacidadTanque = capacidadTanque;
+    public void setEstanque(Estanque estanque) {
+        this.estanque = estanque;
+    }
+
+    public Persona getConductor() {
+        return this.conductor;
+    }
+
+    public void setConductor(Persona conductor) {
+        this.conductor = conductor;
+    }
+
+    public Rueda[] getRuedas() {
+        return this.ruedas;
+    }
+
+    public void setRuedas(Rueda[] ruedas) {
+        this.ruedas = ruedas;
     }
 
     public static String getColorPatente() {
@@ -110,7 +135,7 @@ public class Automovil {
                 "\nauto.model = " + this.model +
                 "\nauto.tipo = " + this.getTipo().getDescripcion() +
                 "\nauto.color = " + this.color +
-                "\nauto.cilindrada = " + this.cilindrada +
+                "\nauto.cilindrada = " + this.motor.getCilindrada() +
                 "\ncolorPatente = " + Automovil.colorPatente;
 
     }
@@ -130,11 +155,11 @@ public class Automovil {
     }
 
     public  float calcularConsumo(int km, float porcentajeGasolina){
-        return km/(this.capacidadTanque*porcentajeGasolina);
+        return km/(this.estanque.getCapacidad()*porcentajeGasolina);
     }
 
     public  float calcularConsumo(int km, int porcentajeGasolina){
-        return km/(this.capacidadTanque*(porcentajeGasolina/100f));
+        return km/(this.estanque.getCapacidad()*(porcentajeGasolina/100f));
     }
 
     @Override
