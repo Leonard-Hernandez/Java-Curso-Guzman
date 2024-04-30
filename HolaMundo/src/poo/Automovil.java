@@ -140,11 +140,23 @@ public class Automovil {
         if (this.getTipo() != null) {
                 detalles += "\nauto.tipo = " + this.getTipo().getDescripcion();
         }
+
         detalles+="\nauto.color = " + this.color +
                 "\ncolorPatente = " + Automovil.colorPatente;
         if (this.motor != null) {
             detalles += "\nauto.cilindrada = " + this.motor.getTipoMotor();
         }
+
+        if(getConductor() != null){
+            detalles += "\nauto.conductor = " + this.conductor;            
+        }
+
+        if(getRuedas() != null){
+            for (Rueda rueda : ruedas) {
+                detalles += "\nauto.rueda = " + rueda.getFabricante() + " aro = " + rueda.getAro() + " ancho = " + rueda.getAncho();
+            }            
+        }
+
         return detalles; 
 
         }
