@@ -4,11 +4,9 @@ public class EjemploAutomovilRelacionesObjeto {
     public static void main(String[] args) {
 
         Rueda[] ruedasSub = new Rueda[5];
-        ruedasSub[0] = new Rueda("Yokohama",16,7.5);
-        ruedasSub[1] = new Rueda("Yokohama",16,7.5);
-        ruedasSub[2] = new Rueda("Yokohama",16,7.5);
-        ruedasSub[3] = new Rueda("Yokohama",16,7.5);
-        ruedasSub[4] = new Rueda("Yokohama",16,7.5);
+        for (int i = 0; i < ruedasSub.length; i++) {
+            ruedasSub[i] = new Rueda("Yokohama",16,7.5);
+        }
 
         Persona conductorSubaro = new Persona("Andrez", "Guzman");
         Automovil subaru = new Automovil("Subaru","Impresa", Color.ROJO);
@@ -18,13 +16,11 @@ public class EjemploAutomovilRelacionesObjeto {
         subaru.setConductor(conductorSubaro);
         subaru.setRuedas(ruedasSub);
 
-        Rueda[] ruedasSupra = {
-            new Rueda("Michelin", 15,5),
-            new Rueda("Michelin", 15,5),
-            new Rueda("Michelin", 15,5),
-            new Rueda("Michelin", 15,5),
-            new Rueda("Michelin", 15,5)
-        };
+        Rueda[] ruedasSupra = new Rueda[5];
+
+        for (int i = 0; i < ruedasSupra.length; i++) {
+            ruedasSupra[i] = new Rueda("Michelin", 15,5)
+        }        
 
         Persona conductorSupra = new Persona("Leonard", "hernandez");
         Automovil supra = new Automovil("Toyota", "Supra", Color.VERDE, 
