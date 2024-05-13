@@ -50,9 +50,9 @@ public class OrdenCompra {
         if (indiceProductos < productos.length) {
             this.productos[indiceProductos] = producto;
             indiceProductos++;
+        }else{
+            System.out.println("capacidad agotada");
         }
-        System.out.println("capacidad agotada");
-
     }
 
     public int getTotal() {
