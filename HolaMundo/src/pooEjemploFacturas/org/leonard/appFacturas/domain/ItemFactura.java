@@ -5,8 +5,6 @@ public class ItemFactura {
     private int cantidad;
     private Producto producto;
 
-    
-
     public ItemFactura(int cantidad, Producto producto) {
         this.cantidad = cantidad;
         this.producto = producto;
@@ -27,7 +25,5 @@ public class ItemFactura {
     public void setProducto(Producto producto) {
         this.producto = producto;
     }
-
-    
 
 }
