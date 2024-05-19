@@ -7,6 +7,16 @@ public class Producto {
     private Float precio;
     private static int ultimoCodigo;
 
+    public Producto() {
+        this.codigo = ++ultimoCodigo;
+    }
+
+    public Producto(String nombre, Float precio) {
+        this();
+        this.nombre = nombre;
+        this.precio = precio;
+    }
+
     public int getCodigo() {
         return codigo;
     }
