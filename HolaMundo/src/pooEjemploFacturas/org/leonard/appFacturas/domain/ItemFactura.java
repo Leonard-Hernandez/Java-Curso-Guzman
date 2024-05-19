@@ -30,4 +30,9 @@ public class ItemFactura {
         return this.cantidad * this.producto.getPrecio();
     }
 
+    @Override
+    public String toString() {
+        return this.producto + "\t" + this.cantidad + "\t" + this.calcularImporte();
+    }
+
 }

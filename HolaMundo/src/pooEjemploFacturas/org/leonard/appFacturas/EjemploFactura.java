@@ -2,10 +2,7 @@ package pooEjemploFacturas.org.leonard.appFacturas;
 
 import java.util.Scanner;
 
-import pooEjemploFacturas.org.leonard.appFacturas.domain.Cliente;
-import pooEjemploFacturas.org.leonard.appFacturas.domain.Factura;
-import pooEjemploFacturas.org.leonard.appFacturas.domain.ItemFactura;
-import pooEjemploFacturas.org.leonard.appFacturas.domain.Producto;
+import pooEjemploFacturas.org.leonard.appFacturas.domain.*;
 
 public class EjemploFactura {
 
@@ -21,9 +18,9 @@ public class EjemploFactura {
         Factura factura = new Factura(descrip, cliente);
 
         Producto producto;
-        String nombre;
-        float precio;
-        int cant;
+        // String nombre;
+        // float precio;
+        // int cant;
 
         System.out.println();
 
@@ -31,17 +28,13 @@ public class EjemploFactura {
 
             producto = new Producto();
             System.out.println("Ingrese producto No " + producto.getCodigo() + ": ");
-            nombre = sc.nextLine();
-            producto.setNombre(nombre);
+            producto.setNombre(sc.nextLine());
 
-            System.out.println("Ingrese el precio: ");
-            precio = sc.nextFloat();
-            producto.setPrecio(precio);
+            System.out.println("Ingrese el pholarecio: ");
+            producto.setPrecio(sc.nextFloat());
 
-            System.out.println("Ingrese la cantidad: ");
-            cant = sc.nextInt();
-            ItemFactura item = new ItemFactura(cant, producto);
-            factura.addItemFactura(item);
+            System.out.println("Ingrese la cantidad: "); 
+            factura.addItemFactura(new ItemFactura(sc.nextInt(), producto));
 
             System.out.println();
             sc.nextLine();
@@ -49,7 +42,7 @@ public class EjemploFactura {
 
         sc.close();
 
-        System.out.println(factura.generarDetalle());
+        System.out.println(factura);
 
     }
 
