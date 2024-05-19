@@ -14,13 +14,9 @@ public class EjemploFactura {
 
         Scanner sc = new Scanner(System.in);
         System.out.println("Ingrese la descripción de la Factura");
-        String descrip = sc.nextLine();
-        Factura factura = new Factura(descrip, cliente);
+        Factura factura = new Factura(sc.nextLine(), cliente);
 
         Producto producto;
-        // String nombre;
-        // float precio;
-        // int cant;
 
         System.out.println();
 
