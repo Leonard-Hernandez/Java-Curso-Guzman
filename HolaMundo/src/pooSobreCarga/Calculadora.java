@@ -6,6 +6,30 @@ public class Calculadora {
         return a + b;
     }
 
+    public int sumar(int... argumentos) {
+        int total = 0;
+        for (int i = 0; i < argumentos.length; i++) {
+            total += argumentos[i];
+        }
+        return total;
+    }
+    
+    public float sumar(float a, int... argumentos) {
+        float total = a;
+        for (int i = 0; i < argumentos.length; i++) {
+            total += argumentos[i];
+        }
+        return total;
+    }
+
+    public double sumar(double... argumentos) {
+        double total = 0;
+        for (int i = 0; i < argumentos.length; i++) {
+            total += argumentos[i];
+        }
+        return total;
+    }
+
     public float sumar(float a, float b) {
         return a + b;
     }
@@ -31,9 +55,4 @@ public class Calculadora {
         }
         return resultado;
     }
-
-    public int sumar(int a, int b, int c) {
-        return a + b + c;
-    }
-
 }
