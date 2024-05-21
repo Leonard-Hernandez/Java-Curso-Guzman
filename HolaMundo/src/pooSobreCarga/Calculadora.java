@@ -2,11 +2,13 @@ package pooSobreCarga;
 
 public class Calculadora {
 
-    public int sumar(int a, int b) {
+    private Calculadora() {}
+
+    public static int sumar(int a, int b) {
         return a + b;
     }
 
-    public int sumar(int... argumentos) {
+    public static int sumar(int... argumentos) {
         int total = 0;
         for (int i = 0; i < argumentos.length; i++) {
             total += argumentos[i];
@@ -14,7 +16,7 @@ public class Calculadora {
         return total;
     }
     
-    public float sumar(float a, int... argumentos) {
+    public static float sumar(float a, int... argumentos) {
         float total = a;
         for (int i = 0; i < argumentos.length; i++) {
             total += argumentos[i];
@@ -22,7 +24,7 @@ public class Calculadora {
         return total;
     }
 
-    public double sumar(double... argumentos) {
+    public static double sumar(double... argumentos) {
         double total = 0;
         for (int i = 0; i < argumentos.length; i++) {
             total += argumentos[i];
@@ -30,23 +32,23 @@ public class Calculadora {
         return total;
     }
 
-    public float sumar(float a, float b) {
+    public static float sumar(float a, float b) {
         return a + b;
     }
 
-    public float sumar(float a, int b) {
+    public static float sumar(float a, int b) {
         return a + b;
     }
 
-    public float sumar(int a, float b) {
+    public static float sumar(int a, float b) {
         return a + b;
     }
 
-    public double sumar(double a, double b) {
+    public static double sumar(double a, double b) {
         return a + b;
     }
 
-    public int sumar(String a, String b) {
+    public static int sumar(String a, String b) {
         int resultado;
         try {
             resultado = Integer.parseInt(a) + Integer.parseInt(b);
