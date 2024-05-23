@@ -6,6 +6,21 @@ public class EjemploHerencia {
         Alumno alumno = new Alumno();
         alumno.setNombre("Leonard");
         alumno.setApellido("Hernandez");
+        alumno.setInstitucion("UTN");
+        alumno.setNotaMatematicas(10);
+        alumno.setNotaLenguaje(9);
+        alumno.setNotaHistoria(8);
+
+        AlumnoInternacional alumnoInternacional = new AlumnoInternacional();
+        alumnoInternacional.setNombre("lubraska");
+        alumnoInternacional.setApellido("Ferreira");
+        alumnoInternacional.setPais("Australia");
+        alumnoInternacional.setEdad(15);
+        alumnoInternacional.setInstitucion("UTN");
+        alumnoInternacional.setNotaIdiomas(2.5);
+        alumnoInternacional.setNotaMatematicas(10);
+        alumnoInternacional.setNotaLenguaje(9);
+        alumnoInternacional.setNotaHistoria(8);
 
         Profesor profesor = new Profesor();
         profesor.setNombre("Carlos");
@@ -14,6 +29,19 @@ public class EjemploHerencia {
 
         System.out.println(alumno.getNombre() + " " + alumno.getApellido());
         System.out.println(profesor.getNombre() + " " + profesor.getApellido() + " " + profesor.getAsignatura());
+
+        Class claseAlumnoInt = alumnoInternacional.getClass();
+        while (claseAlumnoInt.getSuperclass() != null) {
+
+            String hija = claseAlumnoInt.getName();
+            String padre = claseAlumnoInt.getSuperclass().getName();
+
+            System.out.println("hija = " + hija);
+            System.out.println("padre = " + padre);
+
+            claseAlumnoInt = claseAlumnoInt.getSuperclass();
+
+        }
     }
 
 }
