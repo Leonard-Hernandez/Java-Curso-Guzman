@@ -53,4 +53,8 @@ public class Persona {
         this.email = email;
     }
 
+    public String saludar(){
+        return "Hola, que tal";
+    }
+
 }

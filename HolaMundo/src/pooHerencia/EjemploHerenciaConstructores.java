@@ -54,6 +54,8 @@ public class EjemploHerenciaConstructores {
                 System.out.println("Pais = " + alumnoInternacional.getPais());
 
             }
+            System.out.println("========== Sobreescritura calcularPromedio ==========");
+            System.out.println("Promedio = " + ((Alumno)persona).calcularPromedio());
 
         }
 
@@ -61,6 +63,8 @@ public class EjemploHerenciaConstructores {
             Profesor profesor = (Profesor) persona;
             System.out.println("Asignatura = " + profesor.getAsignatura());
         }
+        System.out.println("========== Sobreescritura saludar ==========");
+        System.out.println(persona.saludar());
 
         System.out.println();
 

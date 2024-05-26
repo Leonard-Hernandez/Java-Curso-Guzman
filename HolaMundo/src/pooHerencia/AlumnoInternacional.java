@@ -34,4 +34,14 @@ public class AlumnoInternacional extends Alumno {
         this.notaIdiomas = notaIdiomas;
     }
 
+    @Override
+    public String saludar() {
+        return "Buenos dias soy el alumono del pais: " + this.getPais() + " y mi nombre es " + this.getNombre() + " " + this.getApellido();
+    }
+
+    @Override
+    public double calcularPromedio() {
+        return ((super.calcularPromedio()*3) + this.getNotaIdiomas())/4;
+    }
+
 }
