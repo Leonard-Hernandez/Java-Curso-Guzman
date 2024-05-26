@@ -7,7 +7,7 @@ public class Persona {
     private int edad;
     private String email;
 
-    public Persona(){
+    public Persona() {
         System.out.println("Persona: Inicializando constructor");
     }
 
@@ -53,8 +53,17 @@ public class Persona {
         this.email = email;
     }
 
-    public String saludar(){
+    public String saludar() {
         return "Hola, que tal";
+    }
+
+    @Override
+    public String toString() {
+        return "nombre=" + nombre + "\n" +
+                "apellido=" + apellido + "\n" +
+                "edad=" + edad + "\n" +
+                "email=" + email+ "\n" +
+                "saludar=" + this.saludar();
     }
 
 }

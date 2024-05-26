@@ -75,4 +75,14 @@ public class Alumno extends Persona {
         return (this.getNotaMatematicas() + this.getNotaLenguaje() + this.getNotaHistoria()) / 3;
     }
 
+    @Override
+    public String toString() {
+        return super.toString() + "\n" +
+                "institucion=" + institucion + "\n" +
+                "notaMatematicas=" + notaMatematicas + "\n" +
+                "notaLenguaje=" + notaLenguaje + "\n" +
+                "notaHistoria=" + notaHistoria + "\n" +
+                "promedio=" + this.calcularPromedio();
+    }
+
 }

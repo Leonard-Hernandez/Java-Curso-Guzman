@@ -44,4 +44,12 @@ public class AlumnoInternacional extends Alumno {
         return ((super.calcularPromedio()*3) + this.getNotaIdiomas())/4;
     }
 
+    @Override
+    public String toString() {
+        return super.toString() + "\n" +
+                "pais=" + pais + "\n" +
+                "notaIdiomas=" + notaIdiomas + "\n" +
+                "promedio=" + this.calcularPromedio();
+    }
+
 }
