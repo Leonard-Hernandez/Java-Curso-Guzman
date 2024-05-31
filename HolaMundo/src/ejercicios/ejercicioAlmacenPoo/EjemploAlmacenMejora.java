@@ -15,6 +15,7 @@ public class EjemploAlmacenMejora {
         Perecible per1 = new Perecible("perecible1", 10d, LocalDate.now());
         Limpieza lim1 = new Limpieza("limpieza1", 10d, "papel", 10d);
         NoPerecible noPer1 = new NoPerecible("noPerecible1", 10d, 10, 10);
+        NoPerecible noPer2 = new NoPerecible("lata", 10d, 0, 0);
 
         cliente1.hacerCompras(per1, vendedor1);
         cliente2.hacerCompras(lim1, vendedor2);
