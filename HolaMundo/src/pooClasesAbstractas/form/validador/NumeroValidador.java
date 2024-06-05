@@ -2,7 +2,7 @@ package pooClasesAbstractas.form.validador;
 
 public class NumeroValidador extends Validador{
 
-    protected String mensaje = "No es un numero";
+    protected String mensaje = "El campo %s debe ser un numero";
 
     @Override
     public void setMensaje(String mensaje) {

@@ -2,7 +2,7 @@ package pooClasesAbstractas.form.validador;
 
 public class EmailValidador extends Validador {
 
-    protected String mensaje = "formato de email incorrecto";
+    protected String mensaje = "el campo %s no es un email";
     private final static String EMAIL_REGEX= "^(.+)@(.+)$";
 
     @Override

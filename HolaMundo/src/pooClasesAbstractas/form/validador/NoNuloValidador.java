@@ -2,7 +2,7 @@ package pooClasesAbstractas.form.validador;
 
 public class NoNuloValidador extends Validador{
 
-    protected String mensaje = "No puede ser nulo";
+    protected String mensaje = "El campo %s no puede ser nulo";
 
     @Override
     public void setMensaje(String mensaje) {

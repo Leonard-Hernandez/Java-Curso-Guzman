@@ -13,15 +13,15 @@ abstract public class ElementoForm {
     private List<Validador> validadores;
     private List<String> errores;
 
-    public ElementoForm(){
+    public ElementoForm() {
         this.validadores = new ArrayList<Validador>();
         this.errores = new ArrayList<String>();
     }
 
-    public ElementoForm(String nombre){
+    public ElementoForm(String nombre) {
         this();
         this.nombre = nombre;
-    }    
+    }
 
     public void setValor(String valor) {
         this.valor = valor;
@@ -40,12 +40,13 @@ abstract public class ElementoForm {
 
         for (Validador validador : this.validadores) {
             if (!validador.esValiddo(this.valor)) {
-                this.errores.add(validador.getMensaje());
+                this.errores.add(String.format(validador.getMensaje(), this.nombre));
             }
         }
 
         return (this.errores.isEmpty());
     }
+
     abstract public String dibujarHtml();
 
 }
