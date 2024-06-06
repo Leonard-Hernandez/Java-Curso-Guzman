@@ -1,8 +1,10 @@
 package pooClasesAbstractas.form.validador;
 
-public class LargoValidadros extends Validador {
+import pooClasesAbstractas.form.validador.mensaje.MensajeFormateable;
 
-    protected String mensaje = "El campo debe tener minimo %d caracteres y maximo %d caracteres";
+public class LargoValidadros extends Validador implements MensajeFormateable {
+
+    protected String mensaje = "El campo %s debe tener minimo %d caracteres y maximo %d caracteres";
     private int min;
     private int max = Integer.MAX_VALUE;
 
@@ -33,7 +35,7 @@ public class LargoValidadros extends Validador {
 
     @Override
     public boolean esValiddo(String valor) {
-        this.mensaje = String.format(this.mensaje, this.min, this.max);
+        //this.mensaje = String.format(this.mensaje, this.min, this.max);
 
         if (valor == null) {
             return false;            
@@ -41,6 +43,11 @@ public class LargoValidadros extends Validador {
 
         return (valor.length() >= this.min && valor.length() <= this.max);
 
+    }
+
+    @Override
+    public String getMensajeFormateado(String campo) {
+        return String.format(this.mensaje, campo, this.min, this.max);
     }
 
 }

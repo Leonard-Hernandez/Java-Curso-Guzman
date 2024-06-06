@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import pooClasesAbstractas.form.validador.Validador;
+import pooClasesAbstractas.form.validador.mensaje.MensajeFormateable;
 
 abstract public class ElementoForm {
 
@@ -40,7 +41,13 @@ abstract public class ElementoForm {
 
         for (Validador validador : this.validadores) {
             if (!validador.esValiddo(this.valor)) {
-                this.errores.add(String.format(validador.getMensaje(), this.nombre));
+
+                if(validador instanceof MensajeFormateable){
+                    this.errores.add(((MensajeFormateable)validador).getMensajeFormateado(this.nombre));
+                } else{
+                    this.errores.add(String.format(validador.getMensaje(), this.nombre));
+                }
+               
             }
         }
 
