@@ -1,4 +1,4 @@
-package ejercicios.ejercicioManiferosPoo.tiposManiferos;
+package ejercicios.ejercicioMamiferosPoo.tiposManiferos;
 
 abstract public class Mamifero {
 
@@ -6,12 +6,12 @@ abstract public class Mamifero {
     protected Float altura;
     protected Float largo;
     protected Float peso;
-    protected Float nombreCientifico;
+    protected String nombreCientifico;
 
 
     public Mamifero() {}
 
-    public Mamifero(String habitat, Float altura, Float largo, Float peso, Float nombreCientifico) {
+    public Mamifero(String habitat, Float altura, Float largo, Float peso, String nombreCientifico) {
         this.habitat = habitat;
         this.altura = altura;
         this.largo = largo;
@@ -51,11 +51,11 @@ abstract public class Mamifero {
         this.peso = peso;
     }
 
-    public Float getNombreCientifico() {
+    public String getNombreCientifico() {
         return nombreCientifico;
     }
 
-    public void setNombreCientifico(Float nombreCientifico) {
+    public void setNombreCientifico(String nombreCientifico) {
         this.nombreCientifico = nombreCientifico;
     }
 

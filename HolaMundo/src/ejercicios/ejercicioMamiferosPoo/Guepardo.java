@@ -1,12 +1,12 @@
-package ejercicios.ejercicioManiferosPoo;
+package ejercicios.ejercicioMamiferosPoo;
 
-import ejercicios.ejercicioManiferosPoo.tiposManiferos.Felino;
+import ejercicios.ejercicioMamiferosPoo.tiposManiferos.Felino;
 
 public class Guepardo extends Felino{
 
     public Guepardo() {}
 
-    public Guepardo(String habitat, Float altura, Float largo, Float peso, Float nombreCientifico, Float tamanoGarras, int velocidad) {
+    public Guepardo(String habitat, Float altura, Float largo, Float peso, String nombreCientifico, Float tamanoGarras, int velocidad) {
         super(habitat, altura, largo, peso, nombreCientifico, tamanoGarras, velocidad);
     }
 
@@ -29,7 +29,5 @@ public class Guepardo extends Felino{
     public String comunicarse() {
         return "El guepardo de especie " + getNombreCientifico() + " en su habitat " + getHabitat() + " comunica";
     }
-
-
 
 }

@@ -1,6 +1,6 @@
-package ejercicios.ejercicioManiferosPoo;
+package ejercicios.ejercicioMamiferosPoo;
 
-import ejercicios.ejercicioManiferosPoo.tiposManiferos.Felino;
+import ejercicios.ejercicioMamiferosPoo.tiposManiferos.Felino;
 
 public class Tigre extends Felino{
 
@@ -8,7 +8,7 @@ public class Tigre extends Felino{
 
     public Tigre() {}
 
-    public Tigre(String habitat, Float altura, Float largo, Float peso, Float nombreCientifico, Float tamanoGarras, int velocidad, String especieTigre) {
+    public Tigre(String habitat, Float altura, Float largo, Float peso, String nombreCientifico, Float tamanoGarras, int velocidad, String especieTigre) {
         super(habitat, altura, largo, peso, nombreCientifico, tamanoGarras, velocidad);
         this.especieTigre = especieTigre; 
     } 

@@ -1,6 +1,6 @@
-package ejercicios.ejercicioManiferosPoo;
+package ejercicios.ejercicioMamiferosPoo;
 
-import ejercicios.ejercicioManiferosPoo.tiposManiferos.Canino;
+import ejercicios.ejercicioMamiferosPoo.tiposManiferos.Canino;
 
 public class Perro extends Canino{
 
@@ -8,7 +8,7 @@ public class Perro extends Canino{
 
     public Perro() {}
 
-    public Perro(String habitat, Float altura, Float largo, Float peso, Float nombreCientifico, String color, Float tamanoColmillos, Integer fuerzaMordida) {
+    public Perro(String habitat, Float altura, Float largo, Float peso, String nombreCientifico, String color, Float tamanoColmillos, Integer fuerzaMordida) {
         super(habitat, altura, largo, peso, nombreCientifico, color, tamanoColmillos);
         this.fuerzaMordida = fuerzaMordida;
     }

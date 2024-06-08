@@ -1,6 +1,6 @@
-package ejercicios.ejercicioManiferosPoo;
+package ejercicios.ejercicioMamiferosPoo;
 
-import ejercicios.ejercicioManiferosPoo.tiposManiferos.Canino;
+import ejercicios.ejercicioMamiferosPoo.tiposManiferos.Canino;
 
 public class Lobo extends Canino{
 
@@ -9,7 +9,7 @@ public class Lobo extends Canino{
 
     public Lobo() {}
 
-    public Lobo(String habitat, Float altura, Float largo, Float peso, Float nombreCientifico, String color, Float tamanoColmillos) {
+    public Lobo(String habitat, Float altura, Float largo, Float peso, String nombreCientifico, String color, Float tamanoColmillos) {
         super(habitat, altura, largo, peso, nombreCientifico, color, tamanoColmillos);
         this.color = color;
         this.tamanoColmillos = tamanoColmillos;
