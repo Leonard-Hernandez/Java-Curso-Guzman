@@ -6,18 +6,18 @@ public class EjemploImprenta {
 
     public static void main(String[] args) {
 
-        Curriculo cv = new Curriculo("leonard", "Tecnico en sistemas", "Apasionado por la tecnologia");
-        cv.addExperiencia("Java");
-        cv.addExperiencia("Spring framwork");
-        cv.addExperiencia("Mysql");
-        cv.addExperiencia("Git");
+        Curriculo cv = new Curriculo(new Persona("Leonard", "Herandez"), "Tecnico en sistemas", "Apasionado por la tecnologia");
+        cv.addExperiencia("Java")
+                .addExperiencia("Spring framwork")
+                .addExperiencia("Mysql")
+                .addExperiencia("Git");
 
-        Libro libro = new Libro("George Orwell", "1984", Genero.DRAMA);
+        Libro libro = new Libro(new Persona("George", "Orwell"), "1984", Genero.DRAMA);
         libro.addpagina(new Pagina("Winstong no amaba al partido...."))
                 .addpagina(new Pagina("Lo obligaron a hacerlo"))
                 .addpagina(new Pagina("Recomiendo leer rebelion en la granja"));
 
-        Informe informe = new Informe("Leonard", "Lubraska",
+        Informe informe = new Informe(new Persona("Lubraska", "Hernandez") , new Persona("Lubraska", "Ferreira"),
                 "Implementacion de windows server para despliegue de imagenes");
         imprimir(cv);
         imprimir(informe);
