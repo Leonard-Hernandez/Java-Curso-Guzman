@@ -26,7 +26,7 @@ public class ClienteListRepositorio implements CrudRepositorio, OrdenableReposit
         for (Cliente cli : dataSource) {
             {
 
-                if (cli.getId().equals(id)) {
+                if (cli.getId() != null && cli.getId().equals(id)) {
                     c = cli;
                     break;
                 }
@@ -55,14 +55,33 @@ public class ClienteListRepositorio implements CrudRepositorio, OrdenableReposit
 
     @Override
     public List<Cliente> listar(int desde, int hasta) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'listar'");
+        return dataSource.subList(desde, hasta);
     }
 
     @Override
     public List<Cliente> listar(String campo, Dirrecion dir) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'listar'");
-    }
 
+        dataSource.sort((Cliente a, Cliente b) -> {
+            int resultado = 0;
+            if (dir == Dirrecion.ASC) {
+
+                switch (campo) {
+                    case "id" -> resultado = a.getId().compareTo(b.getId());
+                    case "nombre" -> resultado = a.getNombre().compareTo(b.getNombre());
+                    case "apellidos" -> resultado = a.getApellidos().compareTo(b.getApellidos());
+                }
+
+            } else if (dir == Dirrecion.DESC) {
+                switch (campo) {
+                    case "id" -> resultado = b.getId().compareTo(a.getId());
+                    case "nombre" -> resultado = b.getNombre().compareTo(a.getNombre());
+                    case "apellidos" -> resultado = b.getApellidos().compareTo(a.getApellidos());
+                }
+            }
+            return resultado;
+        });
+
+        return dataSource;
+
+    }
 }

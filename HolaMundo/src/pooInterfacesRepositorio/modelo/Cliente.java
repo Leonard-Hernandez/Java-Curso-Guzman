@@ -11,9 +11,8 @@ public class Cliente {
         this.id = ++ultimoId;
     }
 
-    public Cliente(Integer id, String nombre, String apellidos) {
+    public Cliente(String nombre, String apellidos) {
         this();
-        this.id = id;
         this.nombre = nombre;
         this.apellidos = apellidos;
     }
