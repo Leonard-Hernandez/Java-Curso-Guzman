@@ -6,8 +6,6 @@ import pooInterfacesRepositorio.modelo.Cliente;
 import pooInterfacesRepositorio.repositorio.ClienteListRepositorio;
 import pooInterfacesRepositorio.repositorio.Dirrecion;
 import pooInterfacesRepositorio.repositorio.OrdenablePaginableCrudRepositorio;
-import pooInterfacesRepositorio.repositorio.OrdenableRepositorio;
-import pooInterfacesRepositorio.repositorio.PaginableRepositorio;
 
 public class EjemploRepositorio {
 
