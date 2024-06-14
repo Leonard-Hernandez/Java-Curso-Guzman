@@ -4,8 +4,8 @@ import java.util.List;
 
 import pooInterfacesRepositorio.modelo.Cliente;
 import pooInterfacesRepositorio.repositorio.ClienteListRepositorio;
-import pooInterfacesRepositorio.repositorio.CrudRepositorio;
 import pooInterfacesRepositorio.repositorio.Dirrecion;
+import pooInterfacesRepositorio.repositorio.OrdenablePaginableCrudRepositorio;
 import pooInterfacesRepositorio.repositorio.OrdenableRepositorio;
 import pooInterfacesRepositorio.repositorio.PaginableRepositorio;
 
@@ -13,7 +13,7 @@ public class EjemploRepositorio {
 
     public static void main(String[] args) {
         
-        CrudRepositorio repo = new ClienteListRepositorio();
+        OrdenablePaginableCrudRepositorio repo = new ClienteListRepositorio();
         repo.crear(new Cliente("Leonard", "Hernandez"));
         repo.crear(new Cliente("Lubraska", "Ferreira"));
         repo.crear(new Cliente("Jose", "Perez"));
@@ -22,14 +22,16 @@ public class EjemploRepositorio {
 
         List<Cliente> clientes = repo.listar();
 
+        System.out.println("Total de registros: " + repo.total());
+
         clientes.forEach(System.out::println);
 
         System.out.println("===== PAGINADO =====");
-        List<Cliente> clientes2 = ((PaginableRepositorio) repo).listar(2, 4);
+        List<Cliente> clientes2 = repo.listar(2, 4);
         clientes2.forEach(System.out::println);
 
         System.out.println("===== ORDENADO =====");
-        List<Cliente> clientes3 = ((OrdenableRepositorio) repo).listar("nombre", Dirrecion.ASC);
+        List<Cliente> clientes3 = repo.listar("nombre", Dirrecion.ASC);
         clientes3.forEach(System.out::println);
 
         System.out.println("===== editar =====");
