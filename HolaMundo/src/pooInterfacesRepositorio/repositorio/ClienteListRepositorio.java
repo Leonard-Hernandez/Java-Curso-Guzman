@@ -1,6 +1,7 @@
 package pooInterfacesRepositorio.repositorio;
 
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.List;
 
 import pooInterfacesRepositorio.modelo.Cliente;
@@ -61,27 +62,35 @@ public class ClienteListRepositorio implements CrudRepositorio, OrdenableReposit
     @Override
     public List<Cliente> listar(String campo, Dirrecion dir) {
 
-        dataSource.sort((Cliente a, Cliente b) -> {
-            int resultado = 0;
-            if (dir == Dirrecion.ASC) {
+        List<Cliente> listaOrdenada = new ArrayList<>(this.dataSource);
+        listaOrdenada.sort(new Comparator<Cliente>() {
 
+            @Override
+            public int compare(Cliente a, Cliente b) {
+                int resultado = 0;
+                if (dir == Dirrecion.ASC) {
+    
+                    resultado = this.ordenar(a, b);
+    
+                } else if (dir == Dirrecion.DESC) {
+                    resultado = this.ordenar(b, a);
+                }
+                return resultado;
+            }
+
+            private int ordenar(Cliente a, Cliente b) {
+                int resultado = 0;
                 switch (campo) {
                     case "id" -> resultado = a.getId().compareTo(b.getId());
                     case "nombre" -> resultado = a.getNombre().compareTo(b.getNombre());
                     case "apellidos" -> resultado = a.getApellidos().compareTo(b.getApellidos());
                 }
-
-            } else if (dir == Dirrecion.DESC) {
-                switch (campo) {
-                    case "id" -> resultado = b.getId().compareTo(a.getId());
-                    case "nombre" -> resultado = b.getNombre().compareTo(a.getNombre());
-                    case "apellidos" -> resultado = b.getApellidos().compareTo(a.getApellidos());
-                }
+                return resultado;
             }
-            return resultado;
+            
         });
 
-        return dataSource;
+        return listaOrdenada;
 
     }
 }
