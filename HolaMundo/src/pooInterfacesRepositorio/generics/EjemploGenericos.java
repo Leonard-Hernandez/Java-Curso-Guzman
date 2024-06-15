@@ -25,8 +25,7 @@ public class EjemploGenericos {
         clientes2.forEach(System.out::println);
         enteros2.forEach(System.out::println);
 
-        List<String> nombres = fromArraytoList(new String[]{"Leonard", "Lubraska",
-         "Jose", "Luis", "Maria"}, enteros2);
+        List<Cliente> clientesArreglo2 = fromArraytoList(clientesArreglo,clientesArreglo);
 
     }
 
