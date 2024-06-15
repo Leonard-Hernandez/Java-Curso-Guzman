@@ -5,6 +5,7 @@ import java.util.Arrays;
 import java.util.List;
 
 import pooInterfacesRepositorio.modelo.Cliente;
+import pooInterfacesRepositorio.modelo.ClientePremium;
 
 public class EjemploGenericos {
 
@@ -26,10 +27,23 @@ public class EjemploGenericos {
         enteros2.forEach(System.out::println);
 
         List<Cliente> clientesArreglo2 = fromArraytoList(clientesArreglo,clientesArreglo);
+        clientesArreglo2.forEach(System.out::println);
 
+        List<ClientePremium> clientePremiumsList = fromArraytoList(new ClientePremium[] {new ClientePremium("Leonard", "Hernandez")
+        , new ClientePremium("Lubraska", "Ferreira")});
+
+        clientePremiumsList.forEach(System.out::println);
     }
 
     public static <T> List<T> fromArraytoList(T[] c) {
+        return Arrays.asList(c);
+    }
+
+    public static <T extends Number> List<T> fromArraytoList(T[] c) {
+        return Arrays.asList(c);
+    }
+
+    public static <T extends Cliente> List<T> fromArraytoList(T[] c) {
         return Arrays.asList(c);
     }
 
