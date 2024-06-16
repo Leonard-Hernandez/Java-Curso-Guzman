@@ -15,24 +15,28 @@ public class EjemploGenericos {
         clientes.add(new Cliente("Leonard", "Hernandez"));
 
         Cliente leonard = (Cliente) clientes.get(0);
+        System.out.println(leonard);
 
         Cliente[] clientesArreglo = { new Cliente("Leonard", "Hernandez"), new Cliente("Lubraska", "Ferreira") };
 
-        Integer[] enteros = {1, 2, 3, 4, 5};
+        Integer[] enteros = { 1, 2, 3, 4, 5 };
 
         List<Cliente> clientes2 = fromArraytoList(clientesArreglo);
         List<Integer> enteros2 = fromArraytoList(enteros);
 
-        clientes2.forEach(System.out::println);
+        imprimirClientes(clientes2);
         enteros2.forEach(System.out::println);
 
-        List<Cliente> clientesArreglo2 = fromArraytoList(clientesArreglo,clientesArreglo);
-        clientesArreglo2.forEach(System.out::println);
+        List<Cliente> clientesArreglo2 = fromArraytoList(clientesArreglo, clientesArreglo);
+        imprimirClientes(clientesArreglo2);
 
-        List<ClientePremium> clientePremiumsList = fromArraytoList(new ClientePremium[] {new ClientePremium("Leonard", "Hernandez")
-        , new ClientePremium("Lubraska", "Ferreira")});
+        List<ClientePremium> clientePremiumsList = fromArraytoList(new ClientePremium[] {
+                new ClientePremium("Leonard", "Hernandez"), new ClientePremium("Lubraska", "Ferreira") });
+        imprimirClientes(clientePremiumsList);
 
-        clientePremiumsList.forEach(System.out::println);
+        System.out.println("Maximo de 1, 5, 2: "+maximo(1, 5, 2));
+        System.out.println("Maximo de 1.5, 5.7, 2.4: "+maximo(1.5, 5.7, 2.4));
+        System.out.println("Maximo de zapato, camisa, pantalon: "+maximo("zapato", "camisa", "pantalon"));
     }
 
     public static <T> List<T> fromArraytoList(T[] c) {
@@ -47,10 +51,26 @@ public class EjemploGenericos {
         return Arrays.asList(c);
     }
 
-    public static <T,G> List<T> fromArraytoList(T[] c, G[] x) {
-        for(G elemento: x){
+    public static <T, G> List<T> fromArraytoList(T[] c, G[] x) {
+        for (G elemento : x) {
             System.out.println(elemento);
         }
         return Arrays.asList(c);
     }
+
+    public static void imprimirClientes(List<? extends Cliente> clientes) {
+        clientes.forEach(System.out::println);
+    }
+
+    public static <T extends Comparable<T>> T maximo(T a, T b, T c) {
+        T max = a;
+        if (b.compareTo(max) > 0) {
+            max = b;
+        }
+        if (c.compareTo(max) > 0) {
+            max = c;
+        }
+        return max;
+    }
+
 }
