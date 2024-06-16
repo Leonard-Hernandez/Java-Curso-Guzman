@@ -34,9 +34,9 @@ public class EjemploGenericos {
                 new ClientePremium("Leonard", "Hernandez"), new ClientePremium("Lubraska", "Ferreira") });
         imprimirClientes(clientePremiumsList);
 
-        System.out.println("Maximo de 1, 5, 2: "+maximo(1, 5, 2));
-        System.out.println("Maximo de 1.5, 5.7, 2.4: "+maximo(1.5, 5.7, 2.4));
-        System.out.println("Maximo de zapato, camisa, pantalon: "+maximo("zapato", "camisa", "pantalon"));
+        System.out.println("Maximo de 1, 5, 2: " + maximo(1, 5, 2));
+        System.out.println("Maximo de 1.5, 5.7, 2.4: " + maximo(1.5, 5.7, 2.4));
+        System.out.println("Maximo de zapato, camisa, pantalon: " + maximo("zapato", "camisa", "pantalon"));
     }
 
     public static <T> List<T> fromArraytoList(T[] c) {
