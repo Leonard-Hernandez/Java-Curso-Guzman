@@ -2,10 +2,8 @@ package pooInterfacesRepositorio.repositorio;
 
 import java.util.List;
 
-import pooInterfacesRepositorio.modelo.Cliente;
+public interface OrdenableRepositorio<T> {
 
-public interface OrdenableRepositorio {
-
-    List<Cliente> listar(String campo, Dirrecion dir);
+    List<T> listar(String campo, Dirrecion dir);
 
 }

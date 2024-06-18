@@ -6,20 +6,20 @@ import java.util.List;
 
 import pooInterfacesRepositorio.modelo.Cliente;
 
-public class ClienteListRepositorio implements OrdenablePaginableCrudRepositorio {
+public abstract class AbstractaListRepositorio<T> implements OrdenablePaginableCrudRepositorio<Cliente> {
 
-    private List<Cliente> dataSource;
+    protected List<T> dataSource;
 
-    public ClienteListRepositorio() {
+    public AbstractaListRepositorio() {
         this.dataSource = new ArrayList<>();
     }
 
     @Override
-    public List<Cliente> listar() {
+    public List<T> listar() {
         return dataSource;
     }
 
-    @Override
+    /*@Override
     public Cliente porId(Integer id) {
         Cliente c = null;
 
@@ -34,11 +34,11 @@ public class ClienteListRepositorio implements OrdenablePaginableCrudRepositorio
 
         }
         return c;
-    }
+    }*/
 
     @Override
-    public void crear(Cliente cliente) {
-        this.dataSource.add(cliente);
+    public void crear(T t) {
+        this.dataSource.add(t);
     }
 
     @Override
@@ -54,11 +54,11 @@ public class ClienteListRepositorio implements OrdenablePaginableCrudRepositorio
     }
 
     @Override
-    public List<Cliente> listar(int desde, int hasta) {
+    public List<T> listar(int desde, int hasta) {
         return dataSource.subList(desde, hasta);
     }
 
-    @Override
+    /*@Override
     public List<Cliente> listar(String campo, Dirrecion dir) {
 
         List<Cliente> listaOrdenada = new ArrayList<>(this.dataSource);
@@ -68,9 +68,9 @@ public class ClienteListRepositorio implements OrdenablePaginableCrudRepositorio
             public int compare(Cliente a, Cliente b) {
                 int resultado = 0;
                 if (dir == Dirrecion.ASC) {
-    
+
                     resultado = this.ordenar(a, b);
-    
+
                 } else if (dir == Dirrecion.DESC) {
                     resultado = this.ordenar(b, a);
                 }
@@ -86,12 +86,12 @@ public class ClienteListRepositorio implements OrdenablePaginableCrudRepositorio
                 }
                 return resultado;
             }
-            
+
         });
 
         return listaOrdenada;
 
-    }
+    }*/
 
     @Override
     public int total() {

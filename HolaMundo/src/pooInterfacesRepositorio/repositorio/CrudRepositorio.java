@@ -2,14 +2,16 @@ package pooInterfacesRepositorio.repositorio;
 
 import java.util.List;
 
-import pooInterfacesRepositorio.modelo.Cliente;
+public interface CrudRepositorio<T> {
 
-public interface CrudRepositorio {
+    List<T> listar();
 
-    List<Cliente> listar();
-    Cliente porId(Integer id);
-    void crear(Cliente cliente);
-    void editar(Cliente cliente);
+    T porId(Integer id);
+
+    void crear(T cliente);
+
+    void editar(T cliente);
+
     void eliminar(Integer id);
 
 }
