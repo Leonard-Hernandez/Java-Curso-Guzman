@@ -4,12 +4,28 @@ import java.util.ArrayList;
 
 import java.util.List;
 
-public abstract class AbstractaListRepositorio<T> implements OrdenablePaginableCrudRepositorio<T> {
+import pooInterfacesRepositorio.modelo.BaseEntity;
+
+public abstract class AbstractaListRepositorio<T extends BaseEntity> implements OrdenablePaginableCrudRepositorio<T> {
 
     protected List<T> dataSource;
 
     public AbstractaListRepositorio() {
         this.dataSource = new ArrayList<>();
+    }
+
+    public T porId(Integer id) {
+        T c = null;
+
+        for (T cli : dataSource) {
+
+            if (cli.getId() != null && cli.getId().equals(id)) {
+                c = cli;
+                break;
+            }
+
+        }
+        return c;
     }
 
     @Override

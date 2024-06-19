@@ -10,7 +10,7 @@ import pooInterfacesRepositorio.repositorio.OrdenablePaginableCrudRepositorio;
 public class EjemploRepositorio {
 
     public static void main(String[] args) {
-        
+
         OrdenablePaginableCrudRepositorio<Cliente> repo = new ClienteListRepositorio();
         repo.crear(new Cliente("Leonard", "Hernandez"));
         repo.crear(new Cliente("Lubraska", "Ferreira"));

@@ -1,28 +1,14 @@
 package pooInterfacesRepositorio.modelo;
 
-public class Cliente {
+public class Cliente extends BaseEntity {
 
-    private Integer id;
     private String nombre;
     private String apellidos;
-    private static int ultimoId;
-
-    public Cliente() {
-        this.id = ++ultimoId;
-    }
 
     public Cliente(String nombre, String apellidos) {
-        this();
+        super();
         this.nombre = nombre;
         this.apellidos = apellidos;
-    }
-
-    public Integer getId() {
-        return id;
-    }
-
-    public void setId(Integer id) {
-        this.id = id;
     }
 
     public String getNombre() {
@@ -70,8 +56,5 @@ public class Cliente {
             return false;
         return true;
     }
-
-    
-    
 
 }
