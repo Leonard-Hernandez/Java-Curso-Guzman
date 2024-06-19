@@ -3,7 +3,7 @@ package pooInterfacesRepositorio;
 import java.util.List;
 
 import pooInterfacesRepositorio.modelo.Cliente;
-import pooInterfacesRepositorio.repositorio.AbstractaListRepositorio;
+import pooInterfacesRepositorio.repositorio.ClienteListRepositorio;
 import pooInterfacesRepositorio.repositorio.Dirrecion;
 import pooInterfacesRepositorio.repositorio.OrdenablePaginableCrudRepositorio;
 
@@ -11,7 +11,7 @@ public class EjemploRepositorio {
 
     public static void main(String[] args) {
         
-        OrdenablePaginableCrudRepositorio repo = new AbstractaListRepositorio();
+        OrdenablePaginableCrudRepositorio<Cliente> repo = new ClienteListRepositorio();
         repo.crear(new Cliente("Leonard", "Hernandez"));
         repo.crear(new Cliente("Lubraska", "Ferreira"));
         repo.crear(new Cliente("Jose", "Perez"));
