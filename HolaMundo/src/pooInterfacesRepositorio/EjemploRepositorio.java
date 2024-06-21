@@ -3,9 +3,9 @@ package pooInterfacesRepositorio;
 import java.util.List;
 
 import pooInterfacesRepositorio.modelo.Cliente;
-import pooInterfacesRepositorio.repositorio.ClienteListRepositorio;
 import pooInterfacesRepositorio.repositorio.Dirrecion;
 import pooInterfacesRepositorio.repositorio.OrdenablePaginableCrudRepositorio;
+import pooInterfacesRepositorio.repositorio.Lista.ClienteListRepositorio;
 
 public class EjemploRepositorio {
 

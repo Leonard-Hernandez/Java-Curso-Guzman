@@ -1,10 +1,12 @@
-package pooInterfacesRepositorio.repositorio;
+package pooInterfacesRepositorio.repositorio.Lista;
 
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
 
 import pooInterfacesRepositorio.modelo.Cliente;
+import pooInterfacesRepositorio.repositorio.AbstractaListRepositorio;
+import pooInterfacesRepositorio.repositorio.Dirrecion;
 
 public class ClienteListRepositorio extends AbstractaListRepositorio<Cliente> {
 
