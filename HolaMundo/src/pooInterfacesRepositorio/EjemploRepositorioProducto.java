@@ -2,11 +2,9 @@ package pooInterfacesRepositorio;
 
 import java.util.List;
 
-import pooInterfacesRepositorio.modelo.Cliente;
 import pooInterfacesRepositorio.modelo.Producto;
 import pooInterfacesRepositorio.repositorio.Dirrecion;
 import pooInterfacesRepositorio.repositorio.OrdenablePaginableCrudRepositorio;
-import pooInterfacesRepositorio.repositorio.Lista.ClienteListRepositorio;
 import pooInterfacesRepositorio.repositorio.Lista.ProductoListRepositorio;
 
 public class EjemploRepositorioProducto {
