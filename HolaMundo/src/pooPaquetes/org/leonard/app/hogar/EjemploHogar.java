@@ -9,6 +9,7 @@ public class EjemploHogar {
         p.setNombre("leonard");
 
         Perro pe = new Perro();
+        System.out.println(pe);
     }
 
 }
