@@ -1,5 +1,6 @@
 package ejercicios.bolsaSuperMercado.modelo;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class BolsaSupermercado<T> {
@@ -8,10 +9,16 @@ public class BolsaSupermercado<T> {
     private int indice;
     public static final int MAX_PRODUCTOS = 5;
 
+    public BolsaSupermercado(){
+        this.contenido = new ArrayList<>();
+    }
+
     public void addProducto(T t) {
         if (indice < MAX_PRODUCTOS) {
             contenido.add(t);
             indice++;
+        }else{
+            System.out.println("La bolsa esta llena");
         }
     }
 
