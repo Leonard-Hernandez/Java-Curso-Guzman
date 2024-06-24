@@ -17,13 +17,15 @@ public class EjemploArreglosBuscarNumeros {
         int num = scanner.nextInt();
 
         int i = 0;
-        for(;i < a.length && a[i] != num;i++){
+        for (; i < a.length && a[i] != num; i++) {
         }
-        if(i == a.length){
+        if (i == a.length) {
             System.out.println("Numero no encontrado");
         } else if (a[i] == num) {
-            System.out.println("El numero fue encontrado en la posicion: " +i);
+            System.out.println("El numero fue encontrado en la posicion: " + i);
         }
+
+        scanner.close();
 
     }
 }

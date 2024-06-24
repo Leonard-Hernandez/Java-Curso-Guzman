@@ -14,20 +14,20 @@ public class EjemploArreglosDesplazarPosicion2b {
         }
 
         System.out.println("Que numero quiere agregar");
-        elemento= scanner.nextInt();
+        elemento = scanner.nextInt();
 
         System.out.println("En que posicion quiere agregarlo de 0 a 9");
         posicion = scanner.nextInt();
 
-        ultimo = a[a.length-1];
-        for (int i = a.length-2; i >= posicion ; i--) {
-            a[i+1] = a[i];
+        ultimo = a[a.length - 1];
+        for (int i = a.length - 2; i >= posicion; i--) {
+            a[i + 1] = a[i];
         }
 
-        int[] b = new int[a.length+1];
-        System.arraycopy(a, 0, b,0, a.length);
+        int[] b = new int[a.length + 1];
+        System.arraycopy(a, 0, b, 0, a.length);
         b[posicion] = elemento;
-        b[b.length-1] = ultimo;
+        b[b.length - 1] = ultimo;
 
         System.out.println("Arreglo Final: ");
 
@@ -35,6 +35,7 @@ public class EjemploArreglosDesplazarPosicion2b {
             System.out.println(b[i]);
         }
 
+        scanner.close();
 
     }
 }

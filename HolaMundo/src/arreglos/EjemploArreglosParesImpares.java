@@ -47,7 +47,7 @@ public class EjemploArreglosParesImpares {
             System.out.print(impares[i] +" ");
         }
 
-
+        scanner.close();
 
     }
 }

@@ -38,5 +38,7 @@ public class EjemploArreglosDetectarOrden {
         if(ascendente == false && descendente == false){
             System.out.println("son todos iguales");
         }
+
+        scanner.close();
     }
 }

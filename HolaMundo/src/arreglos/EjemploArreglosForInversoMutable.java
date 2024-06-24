@@ -1,7 +1,6 @@
 package arreglos;
 
 import java.util.Arrays;
-import java.util.Collections;
 
 public class EjemploArreglosForInversoMutable {
     public static void arregloInverso(String[] arreglo){

@@ -41,5 +41,7 @@ public class EjemploArreglosDesplazarPosicion3b {
         for (int i = 0; i < b.length; i++) {
             System.out.println(i + " -> " + b[i]);
         }
+
+        scanner.close();
     }
 }

@@ -9,18 +9,18 @@ public class EjemploArreglosDesplazarPosicion2 {
         Scanner scanner = new Scanner(System.in);
 
         System.out.println("Ingrese 9 numeros");
-        for (int i = 0; i < a.length-1; i++) {
+        for (int i = 0; i < a.length - 1; i++) {
             a[i] = scanner.nextInt();
         }
 
         System.out.println("Que numero quiere agregar");
-        elemento= scanner.nextInt();
+        elemento = scanner.nextInt();
 
         System.out.println("En que posicion quiere agregarlo de 0 a 9");
         posicion = scanner.nextInt();
 
-        for (int i = a.length-2; i >= posicion ; i--) {
-            a[i+1] = a[i];
+        for (int i = a.length - 2; i >= posicion; i--) {
+            a[i + 1] = a[i];
         }
         a[posicion] = elemento;
 
@@ -30,6 +30,7 @@ public class EjemploArreglosDesplazarPosicion2 {
             System.out.println(a[i]);
         }
 
+        scanner.close();
 
     }
 }

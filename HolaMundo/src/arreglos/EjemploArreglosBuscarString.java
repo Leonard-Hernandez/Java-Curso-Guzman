@@ -17,13 +17,15 @@ public class EjemploArreglosBuscarString {
         String string = scanner.next();
 
         int i = 0;
-        for(;i < a.length && !a[i].equalsIgnoreCase(string);i++){
+        for (; i < a.length && !a[i].equalsIgnoreCase(string); i++) {
         }
-        if(i == a.length){
+        if (i == a.length) {
             System.out.println("Numero no encontrado");
         } else if (a[i].equalsIgnoreCase(string)) {
-            System.out.println("El String fue encontrado en la posicion: " +i);
+            System.out.println("El String fue encontrado en la posicion: " + i);
         }
+
+        scanner.close();
 
     }
 }

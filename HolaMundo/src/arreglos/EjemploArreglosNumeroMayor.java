@@ -11,12 +11,14 @@ public class EjemploArreglosNumeroMayor {
         for (int i = 0; i < a.length; i++) {
             a[i] = scanner.nextInt();
         }
-        
+
         int max = 0;
         for (int i = 1; i < a.length; i++) {
             max = (a[max] > a[i]) ? max : i;
         }
         System.out.println("max = " + a[max]);
-        
+
+        scanner.close();
+
     }
 }

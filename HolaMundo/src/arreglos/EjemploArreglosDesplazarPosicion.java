@@ -13,10 +13,10 @@ public class EjemploArreglosDesplazarPosicion {
             a[i] = scanner.nextInt();
         }
 
-        ultimo = a[a.length-1];
+        ultimo = a[a.length - 1];
 
-        for (int i = a.length-2; i >= 0 ; i--) {
-            a[i+1] = a[i];
+        for (int i = a.length - 2; i >= 0; i--) {
+            a[i + 1] = a[i];
         }
         a[0] = ultimo;
 
@@ -26,6 +26,6 @@ public class EjemploArreglosDesplazarPosicion {
             System.out.println(a[i]);
         }
 
-
+        scanner.close();
     }
 }

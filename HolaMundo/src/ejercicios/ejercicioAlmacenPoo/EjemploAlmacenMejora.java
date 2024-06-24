@@ -19,7 +19,8 @@ public class EjemploAlmacenMejora {
 
         cliente1.hacerCompras(per1, vendedor1);
         cliente2.hacerCompras(lim1, vendedor2);
-        cliente1.hacerCompras(noPer1, vendedor1);
+        cliente1.hacerCompras(noPer2, vendedor1);
+        cliente2.hacerCompras(noPer1, vendedor2);
 
         System.out.println(vendedor1);
         System.out.println(vendedor2);

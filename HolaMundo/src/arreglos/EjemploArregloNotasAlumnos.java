@@ -49,7 +49,6 @@ public class EjemploArregloNotasAlumnos {
         double promedioAlumno = (claseMatematicas[id]+claseHistoria[id]+claselenguaje[id])/3;
         System.out.println("promedio de el alumno es: " + promedioAlumno);
 
-
-
+        scanner.close();
     }
 }
