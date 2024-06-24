@@ -1,4 +1,4 @@
-package ejercicios.bolsaSuperMercado;
+package ejercicios.bolsaSuperMercado.modelo;
 
 import java.util.List;
 
