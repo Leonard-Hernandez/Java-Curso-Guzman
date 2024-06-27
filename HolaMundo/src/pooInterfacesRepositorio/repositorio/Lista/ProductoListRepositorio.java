@@ -7,6 +7,7 @@ import java.util.List;
 import pooInterfacesRepositorio.modelo.Producto;
 import pooInterfacesRepositorio.repositorio.AbstractaListRepositorio;
 import pooInterfacesRepositorio.repositorio.Dirrecion;
+import pooInterfacesRepositorio.repositorio.excepciones.LecturaAccesoDatoException;
 
 public class ProductoListRepositorio extends AbstractaListRepositorio<Producto> {
 
@@ -36,7 +37,7 @@ public class ProductoListRepositorio extends AbstractaListRepositorio<Producto> 
     }
 
     @Override
-    public void editar(Producto producto) {
+    public void editar(Producto producto) throws LecturaAccesoDatoException {
         Producto p = this.porId(producto.getId());
         p.setDescripcion(producto.getDescripcion());
         p.setPrecio(producto.getPrecio());
