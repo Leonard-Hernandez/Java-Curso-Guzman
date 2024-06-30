@@ -3,11 +3,9 @@ package pooInterfacesRepositorio;
 import java.util.List;
 
 import pooInterfacesRepositorio.modelo.Cliente;
-import pooInterfacesRepositorio.repositorio.Dirrecion;
-import pooInterfacesRepositorio.repositorio.OrdenablePaginableCrudRepositorio;
+import pooInterfacesRepositorio.repositorio.*;
 import pooInterfacesRepositorio.repositorio.Lista.ClienteListRepositorio;
-import pooInterfacesRepositorio.repositorio.excepciones.AccesoDatoException;
-import pooInterfacesRepositorio.repositorio.excepciones.LecturaAccesoDatoException;
+import pooInterfacesRepositorio.repositorio.excepciones.*;
 
 public class EjemploRepositorio {
 
@@ -17,10 +15,12 @@ public class EjemploRepositorio {
 
             OrdenablePaginableCrudRepositorio<Cliente> repo = new ClienteListRepositorio();
             repo.crear(new Cliente("Leonard", "Hernandez"));
-            repo.crear(new Cliente("Lubraska", "Ferreira"));
             repo.crear(new Cliente("Jose", "Perez"));
             repo.crear(new Cliente("Luis", "Gonzalez"));
             repo.crear(new Cliente("Maria", "Gonzalez"));
+            Cliente Lubraska = new Cliente("Lubraska", "Ferreira");
+            repo.crear(Lubraska);
+            repo.crear(Lubraska);
 
             List<Cliente> clientes = repo.listar();
 
@@ -47,10 +47,13 @@ public class EjemploRepositorio {
             System.out.println("===== eliminar =====");
             repo.eliminar(0);
             repo.listar().forEach(System.out::println);
+        } catch (RegistroDuplicadoAccesoDatosException e) {
+            System.out.println(e.getMessage());
+            e.printStackTrace();
         } catch (LecturaAccesoDatoException e) {
             System.out.println(e.getMessage());
             e.printStackTrace();
-        } catch(AccesoDatoException e){
+        } catch (AccesoDatoException e) {
             System.out.println(e.getMessage());
             e.printStackTrace();
         }

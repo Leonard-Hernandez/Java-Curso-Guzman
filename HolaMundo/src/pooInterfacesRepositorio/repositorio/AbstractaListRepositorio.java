@@ -5,8 +5,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import pooInterfacesRepositorio.modelo.BaseEntity;
-import pooInterfacesRepositorio.repositorio.excepciones.EscrituraAccesoDatosException;
-import pooInterfacesRepositorio.repositorio.excepciones.LecturaAccesoDatoException;
+import pooInterfacesRepositorio.repositorio.excepciones.*;
 
 public abstract class AbstractaListRepositorio<T extends BaseEntity> implements OrdenablePaginableCrudRepositorio<T> {
 
@@ -47,6 +46,9 @@ public abstract class AbstractaListRepositorio<T extends BaseEntity> implements 
             throw new EscrituraAccesoDatosException("Error al insertar un objeto null");
         }
         this.dataSource.add(t);
+        if (this.dataSource.contains(t)) {
+            throw new RegistroDuplicadoAccesoDatosException("Este objeto ya existe");           
+        }
     }
 
     @Override
