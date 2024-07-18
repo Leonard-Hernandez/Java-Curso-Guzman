@@ -28,7 +28,7 @@ public class Alumno implements Comparable<Alumno> {
 
     @Override
     public String toString() {
-        return "Alumno [nombre=" + nombre + ", nota=" + nota + "]";
+        return nombre + " nota: " + nota;
     }
 
     @Override
@@ -71,6 +71,8 @@ public class Alumno implements Comparable<Alumno> {
             return false;
         return true;
     }
+
+
 
     
 
