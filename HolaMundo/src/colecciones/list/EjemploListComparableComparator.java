@@ -1,4 +1,4 @@
-package colecciones.set;
+package colecciones.list;
 
 import java.util.ArrayList;
 import java.util.Comparator;

@@ -1,8 +1,8 @@
-package colecciones.set;
-
-import java.util.LinkedList;
+package colecciones.list;
 
 import colecciones.modelo.Alumno;
+import java.util.LinkedList;
+import java.util.ListIterator;
 
 public class EjemploLinkedList {
 
@@ -44,6 +44,18 @@ public class EjemploLinkedList {
         System.out.println(sa + ", size = " + sa.size());
 
         System.out.println(sa.indexOf(new Alumno("Santiago", 8)));
+
+        ListIterator<Alumno> li = sa.listIterator();
+
+        while (li.hasNext()) {
+            System.out.println(li.next());
+        }
+        System.out.println("======= previos");
+        while(li.hasPrevious()){
+            System.out.println(li.previous());
+        }
+
+        // para usar estos metodos tiene que haber siguiente y previo en el cursor
 
     }
 
