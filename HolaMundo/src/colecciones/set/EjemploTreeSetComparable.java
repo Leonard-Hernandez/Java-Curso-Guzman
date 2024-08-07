@@ -18,6 +18,8 @@ public class EjemploTreeSetComparable {
         sa.add(new Alumno("Santiago", 8));
         sa.add(new Alumno("Jose", 1));
 
+        //amo a mi novia lubraska
+
         System.out.println(sa);
 
 
