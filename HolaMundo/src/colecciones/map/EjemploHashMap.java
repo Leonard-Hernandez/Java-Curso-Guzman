@@ -70,7 +70,7 @@ public class EjemploHashMap {
             if (v instanceof Map) {
                 Map<String, String> direccionMap = (Map<String, String>) v;
                 
-                for(Map.entry<String,String> par: direccionMap.entrySet()){
+                for(Map.Entry<String,String> duo: direccionMap.entrySet()){
 
                 }
 
