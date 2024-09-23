@@ -32,6 +32,8 @@ public class EjemploExecutorFutureProductorConsumidor {
         executor.shutdown();
         System.out.println("continuando con la ejecucion del main");
 
+        System.out.println("hola desde pc carvajal");
+
     }
 
 }
