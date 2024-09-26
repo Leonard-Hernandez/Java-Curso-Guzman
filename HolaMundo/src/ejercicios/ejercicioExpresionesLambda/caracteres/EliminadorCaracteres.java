@@ -1,4 +1,4 @@
-package ejercicios.ejercicioExpresionesLambda;
+package ejercicios.ejercicioExpresionesLambda.caracteres;
 
 import java.util.List;
 
