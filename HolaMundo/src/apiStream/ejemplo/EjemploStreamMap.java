@@ -23,5 +23,7 @@ public class EjemploStreamMap {
         List<Usuario> lista = nombres.collect(Collectors.toList());
         lista.forEach(u -> System.out.println(u.getApellido()));
 
+        
+
     }
 }
