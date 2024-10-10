@@ -1,5 +1,7 @@
 package apiStream.ejemplo.models;
 
+import java.util.Objects;
+
 public class Usuario {
 
     private Integer id;
@@ -46,4 +48,16 @@ public class Usuario {
         return "Usuario [nombre=" + nombre + ", apellido=" + apellido + "]";
     }
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Usuario usuario = (Usuario) o;
+        return Objects.equals(nombre, usuario.nombre) && Objects.equals(apellido, usuario.apellido);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(nombre, apellido);
+    }
 }
