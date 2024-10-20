@@ -2,6 +2,7 @@ package apiStream.ejemplo;
 
 import apiStream.ejemplo.models.Usuario;
 
+import java.util.IntSummaryStatistics;
 import java.util.stream.IntStream;
 import java.util.stream.Stream;
 
@@ -17,7 +18,14 @@ public class EjemploStreamDistinctUsuarioSum {
                 .peek(System.out::println);
 
         //largoNombres.forEach(System.out::println);
-        System.out.println(largoNombres.sum());
+        IntSummaryStatistics stats = largoNombres.summaryStatistics();
+
+        System.out.println("min " + stats.getMin());
+        System.out.println("max " + stats.getMax());
+        System.out.println("sum " + stats.getSum());
+        System.out.println("avg " + stats.getAverage());
+        System.out.println("count " + stats.getCount());
+        
 
     }
 }
